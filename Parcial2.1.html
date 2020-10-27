@@ -17,11 +17,11 @@
       <!-- <a-box color="yellow" gps-entity-place="latitude: 3.449935; longitude: -76.555866" position="3 0 0"/> -->
       <!-- sol -->
       <a-sphere src="textura/texturaSol.jpg" material="normalMap:textura/normalesPiedra.jpg; normalesSol:6 6"
-        scale="1 1 1" rotation="0 0 0" position="0 0 0"
-        animation="property: rotation; to: -360 360 0; loop: true; dur: 10000" segments-height="70">
+        scale="0.8 0.8 0.8" rotation="0 0 0" position="0 0 0"
+        animation="property: rotation; to: -360  0; loop: true; dur: 10000" segments-height="70">
       </a-sphere>
       <a-entity position="0 0 0"
-        particle-system="texture: textura/pngwing.com.png ;  velocityValue: 1 ;color: #EF0000,#44CC00, " scale=" 3 3 3">
+        particle-system="texture: textura/pngwing.com.png ;  velocityValue: 0.1 ;color: #EF0000,#44CC00, " scale=" 0.3 0.3 0.3">
       </a-entity>
     </a-marker>
 
@@ -32,50 +32,42 @@
         <a-sphere src="textura/tierra.jpg" material="normalMap:textura/normal_tierra.jpg; normaleTierra:6 6"
         scale="0.3 0.3 0.3" rotation="0 0 0" position="0 0 0"
         animation="property: rotation; to:0 360 0; loop: true; dur: 10000" segments-height="70">
+
+        
+          <!-- luna tierra -->
+          <a-sphere src="textura/texturaLuna.jpg"
+          material = "normalMap:textura/normalMapLuna.jpg; normalesLuna:3 3"
+          position="0 0 2" scale = "0.3 0.3 0.3" 
+            animation = "property: rotation; to: 0 360 0; loop: true; dur: 10000">
+          </a-sphere>  
+        
         </a-sphere>
       </a-marker>
   
-      <a-marker type='pattern' Url='assets/pattern-luna.patt' id='luna' registerevents>
-        <!-- luna tierra -->
-        <a-sphere src="textura/texturaLuna.jpg" material="normalMap:textura/normalMapLuna.jpg; normalesLuna:3 3"
-          scale=" 0.1 0.1 0.1" rotation="0 0 0" position=" 0 0 0"
-          animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" segments-height="53">
-        </a-sphere>
-      </a-marker>
 
-      <a-marker type='pattern' Url='assets/pattern-marte.patt' id='marte' registerevents>
-                <!-- marte -->
-        <a-sphere src="textura/marte.jpg" material="normalMap:textura/marteNormales.jpg; normaleMarte:3 3" scale=" 0.2 0.2 0.2" rotation ="0 0 0" position=" 0 0 0"  
-         animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" segments-height="53">           
-        </a-sphere>  
+             <!--Marte-->
+      <a-marker type='pattern' url='assets/pattern-luna.patt' animation = "property: rotation; to: 0 360 0; loop: true; dur: 10000">
+        <a-sphere src="textura/marte.jpg" material = "normalMap:textura/marteNormales.jpg; normaleMarte:3 3"
+         position="0 0 0.5" scale = "0.35 0.35 0.35" 
+        >
       </a-marker>
 
       <a-marker type='pattern' Url='assets/pattern-lunaMarte.patt' id='luna2' registerevents>
         <!-- luna marte -->
         <a-sphere src="textura/texturaLuna.jpg" material="normalMap:textura/normalMapLuna.jpg; normalesLuna:3 3"
-          scale=" 0.1 0.1 0.1" rotation="0 0 0" position=" 0 0 0"
+          scale=" 0.12 0.12 0.12" rotation="0 0 0" position=" 0 0 0"
           animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" segments-height="53">
         </a-sphere>
       </a-marker>
+   
 
       <a-marker type='pattern' Url='assets/pattern-saturno.patt' id='saturno' registerevents>
                 <!-- saturno -->
-        <a-sphere src="textura/saturno.jpg" material="normalMap:textura/normalMapLuna.jpg; normaleSatrurno:3 3" scale=" 0.7 0.7 0.7" rotation ="0 0 0" position=" 0 0 0"  
+        <a-sphere src="textura/saturno.jpg" material="normalMap:textura/normalMapLuna.jpg; normaleSatrurno:3 3" scale=" 0.5 0.5 0.5" rotation ="0 0 0" position=" 0 0 0"  
          animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" segments-height="53"></a-sphere>  
-      </a-marker>
-
-      <a-marker type='pattern' Url='assets/pattern-lunaSaturno.patt' id='luna3' registerevents>
-        <!-- luna saturno -->
-        <a-sphere src="textura/texturaLuna.jpg" material="normalMap:textura/normalMapLuna.jpg; normalesLuna:3 3"
-          scale=" 0.15 0.15 0.15" rotation="0 0 0" position=" 0 0 0"
-          animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" segments-height="53">
-        </a-sphere>
       </a-marker>
  
     </a-entity>
-
-
-
     <a-entity camera>
     </a-entity>
   </a-scene>
